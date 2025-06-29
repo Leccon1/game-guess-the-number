@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>my first game</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="header container">
+			<h1 class="header__title">
+				Привет! <br />
+				Добро пожаловать в мою первую игру, написанную на javaScript!
+			</h1>
+			<p class="header-descriprion">
+				Описание: Компьютер случайным образом загадывает число от 1 до 10. Игрок
+				вводит число с клавиатуры. Программа сравнивает ввод с загаданным числом
+				и сообщает: Угадал ли игрок, Или нужно попробовать число больше или
+				меньше. Игра продолжается, пока число не будет угадано.
+			</p>
+			<p class="header__game-intro">Давай начнем игру!</p>
+			<button class="header__start-game" id="startGameBtn">Играть</button>
+		</header>
+		<main class="game container" id="gameVisiblity">
+			<span class="game__instruction">
+				Задумано число от 1 до 10. <br />
+				Введите ваше число:
+			</span>
+			<input
+				type="text"
+				class="game__input"
+				id="userValue"
+				placeholder="Введите цифру от 1 до 10"
+			/>
+			<button onclick="checkNumber()" id="checkBtn">Проверить</button>
+			<p class="game__label" id="gameLabel"></p>
+			<p class="game__result" id="result"></p>
+			<button id="restartBtn" style="display: none">Заново</button>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
